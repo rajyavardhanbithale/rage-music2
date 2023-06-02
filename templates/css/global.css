@@ -1,0 +1,644 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+:root {
+    --root-black: #2d2e37;
+    --root-grey: #C4C4C4;
+    --root-purple: #5700BF;
+    --root-white: #FDFCFF;
+
+    --root-height: 95vh;
+    --root-width: 95vw;
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+
+    /* outline: 1px solid rgba(255, 0, 0, 0.363); */
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(.././background/bg-blur-noise.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* font-family: 'Mulish', sans-serif; */
+    font-family: 'Rubik', sans-serif;
+    color: var(--root-white);
+
+
+    text-transform: capitalize;
+
+    transition: all 1s;
+
+}
+
+.main-app-name {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: none;
+    margin-bottom: 10px;
+
+}
+
+.main-name {
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Monoton', cursive;
+
+    margin-bottom: 8px;
+
+
+    background: #ff00cc;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #333399, #ff00cc);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6363d1, #ac048a);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.main-name-rotate {
+    text-align: center;
+    text-align: center;
+    font-family: 'Monoton', cursive;
+    font-size: 25px;
+    margin-bottom: 10px;
+
+
+    background: #ff00cc;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #9e0d8b, #ff00cc);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #9e0d8b, #ff00cc);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+
+    -webkit-animation: spin 4s linear infinite;
+    -moz-animation: spin 4s linear infinite;
+    animation: spin 4s linear infinite;
+
+}
+
+.main-box {
+
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+    height: var(--root-height);
+    width: var(--root-width);
+
+    /* background-color: rgba(255, 255, 255, 0.041); */
+    /* backdrop-filter: blur(10px); */
+    /* box-shadow: 10px 10px 10px 10px rgba(45, 46, 55, 0.432); */
+
+    /* border-radius: 5%; */
+}
+
+/* ======================Navbar========================= */
+.nav-ham {
+    font-size: 25px;
+
+
+    padding: 8px;
+    padding-right: 11px;
+    padding-left: 8px;
+
+    background-color: rgba(255, 255, 255, 0.041);
+    backdrop-filter: blur(10px);
+
+    color: #767479;
+
+    border-radius: 8px;
+
+
+
+}
+
+.ham-rotate {
+    -webkit-animation: ham-spin 4s linear infinite;
+    -moz-animation: ham-spin 4s linear infinite;
+    animation: ham-spin 4s linear infinite;
+}
+
+.nav-navbar {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    gap: 30px;
+}
+
+.nav-input-search {
+    width: 100%;
+
+    padding: 8px;
+    padding-left: 20px;
+
+    color: #949296;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: rgba(255, 255, 255, 0.041);
+    backdrop-filter: blur(10px);
+
+}
+
+.nav-input-search-icon {
+
+    font-family: 'Mulish', sans-serif, FontAwesome;
+
+}
+
+
+
+
+
+/* ======================Section for trending================ */
+.main-scroll {
+    margin-top: 18px;
+
+    font-size: 23px;
+    font-weight: bold;
+
+}
+
+.main-list-trending {
+    margin-top: 25px;
+    width: 100%;
+    overflow-x: scroll;
+    white-space: nowrap;
+
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none;
+}
+
+.main-list-trending::-webkit-scrollbar {
+    display: none;
+}
+
+
+.trending-box {
+    display: inline-flex;
+    scroll-behavior: smooth;
+    gap: 20px;
+}
+
+.trending-item {
+    flex-shrink: 0;
+
+    width: 220px;
+    height: 180px;
+    margin-right: 10px;
+    position: relative;
+
+
+}
+
+.trending-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5%;
+
+}
+
+.trending-item-label {
+    position: absolute;
+
+    background-color: rgba(85, 0, 189, 0.467);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+
+
+    margin-top: 140px;
+    margin-left: 20px;
+    padding: 8px;
+
+    font-size: 20px;
+    font-weight: normal;
+
+}
+
+/* =======================category===================== */
+
+.main-category {
+    margin-top: 25px;
+    padding: 5px;
+    font-size: 13px;
+}
+
+.category-list {
+    width: 100%;
+    overflow-x: scroll;
+    white-space: nowrap;
+
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none;
+}
+
+.category-list::-webkit-scrollbar {
+    display: none;
+}
+
+
+.category-box {
+
+    display: inline-flex;
+    scroll-behavior: smooth;
+    gap: 60px;
+}
+
+.category-item {
+    flex-shrink: 0;
+
+    margin-right: 10px;
+    position: relative;
+}
+
+/* ===================music================= */
+
+.main-music {
+    margin-top: 10px;
+    height: 34vh;
+}
+
+.music-list {
+    height: 100%;
+
+    overflow-y: scroll;
+    white-space: nowrap;
+
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none;
+}
+
+.music-list::-webkit-scrollbar {
+    display: none;
+}
+
+
+.music-box {
+
+    display: flex;
+    scroll-behavior: smooth;
+
+    flex-direction: column;
+    gap: 10px;
+}
+
+.music-item {
+    display: flex;
+    flex-direction: row;
+
+    padding: 5px;
+    margin-top: 8px;
+
+    height: 90px;
+    gap: 20px;
+}
+
+.music-item img {
+    height: 75px;
+    width: 75px;
+    object-fit: none;
+    border-radius: 8%
+}
+
+.music-details {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+    justify-content: center;
+    gap: 10px;
+}
+
+.music-details i {
+    padding-right: 5px;
+
+}
+
+
+.music-details-artist {
+    font-size: 12px;
+}
+
+.music-details-heart {
+
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: column;
+
+    padding: 5px;
+    justify-content: center;
+    align-items: flex-end;
+
+    font-size: 30px;
+
+
+}
+
+
+
+.music-details span.animated-text {
+    animation: scrollText 10s linear infinite;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(10%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(10%);
+    }
+}
+
+
+
+
+/* ===============Footer Navbar============================= */
+.footer-navbar {
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.main-footer-navbar {
+    margin-top: 20px;
+
+    height: 8vh;
+    width: 100vw;
+
+    background-color: rgba(255, 255, 255, 0.041);
+    backdrop-filter: blur(10px);
+    /* box-shadow: 10px 10px 10px 10px rgba(45, 46, 55, 0.432); */
+
+    border-radius: 60px 60px 0px 0px;
+}
+.main-footer-navbar-sxy {
+    margin-top: 20px;
+
+    height: 5vh;
+    width: 100vw;
+
+    background-color: rgba(255, 255, 255, 0.041);
+    backdrop-filter: blur(10px);
+    /* box-shadow: 10px 10px 10px 10px rgba(45, 46, 55, 0.432); */
+
+    border-radius: 60px 60px 0px 0px;
+}
+
+.footer-navbar-component {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footer-navbar-component-sxy {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footer-navbar-component-items {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 5%;
+
+    font-size: 1.2em;
+    border-radius: 5px;
+    padding: 8px;
+
+    transition: all 0.2s;
+}
+
+.footer-navbar-sxy {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 4%;
+
+    width: 60%;
+    height: 8px;
+
+    font-size: 3em;
+    border-radius: 50px;
+    border: none;
+
+
+    background-color: #fdfcffc0;
+
+    transition: all 0.2s;
+}
+
+
+
+.footer-navbar-component-items:hover {
+    background-color: #3806759f;
+
+}
+
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+#bar.entry-animation {
+    animation: slideOut 0.3s ease-out;
+    transform: translateY(100%);
+}
+
+#bar.visible {
+    animation: slideIn 0.3s ease-out;
+    transform: translateY(0);
+}
+
+
+
+
+@media only screen and (max-width: 599px) {
+    .footer-navbar-component-items {
+        margin-top: 2.5%;
+        /* Adjust the margin as needed */
+    }
+
+    .footer-navbar-component-items-sxy {
+        margin-top: 5%;
+        /* Adjust the margin as needed */
+    }
+
+
+}
+
+
+/* For devices with a minimum width of 600px (small tablets and larger) */
+@media only screen and (min-width: 600px) {
+    .footer-navbar-component-items {
+        margin-top: 2%;
+        /* Adjust the margin as needed */
+    }
+
+    .footer-navbar-component-items-sxy {
+        margin-top: 5%;
+        /* Adjust the margin as needed */
+    }
+}
+
+/* For devices with a minimum width of 992px (desktops and larger) */
+@media only screen and (min-width: 992px) {
+    .footer-navbar-component-items {
+        margin-top: 5%;
+        /* Adjust the margin as needed */
+    }
+
+    .footer-navbar-component-items-sxy {
+        margin-top: 5%;
+        /* Adjust the margin as needed */
+    }
+}
+
+/* For devices with a minimum width of 1200px (large desktops and larger) */
+@media only screen and (min-width: 1200px) {
+    .footer-navbar-component-items {
+        margin-top: 1%;
+        /* Adjust the margin as needed */
+    }
+
+    .footer-navbar-component-items-sxy {
+        margin-top: 5%;
+        /* Adjust the margin as needed */
+    }
+}
+
+
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+@-moz-keyframes ham-spin {
+    100% {
+        -moz-transform: rotate(360deg);
+        transform: translateX(0%);
+    }
+}
+
+@-webkit-keyframes ham-spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: translateX(0%);
+    }
+}
+
+@keyframes ham-spin {
+    0% {
+        transform: translatey(0%);
+    }
+
+    25% {
+        transform: translateY(10%);
+    }
+
+    75% {
+        transform: translateY(-10%);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+        transform: translateX(0%);
+    }
+}
+
+
+
+
+
+
+
+/* ========================================================= */
+/* ========================================================= */
+/* ========================== PLAYER ======================= */
+/* ========================== PLAYER ======================= */
+/* ========================== PLAYER ======================= */
+/* ========================================================= */
+/* ========================================================= */
+

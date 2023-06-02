@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://www.youtube.com/iframe_api"></script>
+</head>
+<body>
+  <div id="player"></div>
+  <button onclick="playVideo()">Play</button>
+  <button onclick="pauseVideo()">Pause</button>
+
+  <script>
+    var player;
+
+    // YouTube API callback function
+    function onYouTubeIframeAPIReady() {
+      // Create an instance of the YouTube player
+      player = new YT.Player('player', {
+        height: '360',
+        width: '640',
+        videoId: 'izGwDsrQ1eQ', // Replace with your YouTube video ID
+        events: {
+          'onReady': onPlayerReady
+        }
+      });
+    }
+
+    // Function called when the YouTube player is ready
+    function onPlayerReady(event) {
+      // You can perform additional actions here if needed
+    }
+
+    // Function to play the video
+    function playVideo() {
+      if (player.getPlayerState() !== YT.PlayerState.PLAYING) {
+      	console.log("Hellow")
+        player.playVideo();
+      }
+    }
+
+    // Function to pause the video
+    function pauseVideo() {
+      if (player.getPlayerState() === YT.PlayerState.PLAYING) {
+        player.pauseVideo();
+      }
+    }
+  </script>
+</body>
+</html>

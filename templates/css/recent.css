@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+:root {
+    --root-black: #2d2e37;
+    --root-grey: #C4C4C4;
+    --root-purple: #5700BF;
+    --root-white: #FDFCFF;
+
+    --root-height: 95vh;
+    --root-width: 97vw;
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+
+    /* outline: 1px solid rgba(255, 0, 0, 0.363); */
+}
+
+body {
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(.././background/bg-blur-noise.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* font-family: 'Mulish', sans-serif; */
+    font-family: 'Rubik', sans-serif;
+    color: var(--root-white);
+
+
+    text-transform: capitalize;
+
+    /* transition: all 1s; */
+
+}
+
+.recent-box {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    height: var(--root-height);
+    width: var(--root-width);
+
+    
+
+
+}
+
+.recent-navbar {
+    margin-top: 30px;
+
+}
+
+.recent-navbar-box {
+    font-size: 20px;
+    width: 100%;
+    display: flex;
+    /* justify-content: space-between; */
+
+    gap: 20px;
+
+}
+
+.recent-navbar-items {
+    font-size: 25px;
+
+
+    padding: 8px;
+    padding-right: 11px;
+    padding-left: 8px;
+
+    background-color: rgba(255, 255, 255, 0.041);
+    backdrop-filter: blur(10px);
+
+    color: #767479;
+
+    border-radius: 8px;
+}
+
+
+.recent-trending {
+    margin-top: 20px;
+    font-size: 25px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.recent-fav-cards {
+    padding: 5px;
+    margin-top: 25px;
+    height: 70vh;
+
+
+}
+
+/* ========================================================== */
+.fav-cards-item {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow-x: scroll;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    gap: 30px;
+    /* Add the following properties for vertical scrolling */
+    flex-direction: row;
+    overflow-y: auto;
+    max-height: 70vh; /* Adjust the max-height as needed */
+}
+
+.content {
+    margin-bottom: 0px;
+    scroll-behavior: smooth;
+    flex-shrink: 0;
+}
+
+
+.content{
+    margin-bottom: 0px;
+    scroll-behavior: smooth;
+    flex-shrink: 0;
+}
+
+
+.image {
+   
+    width: 150px;
+    height: 150px;
+
+    position: relative;
+    margin-bottom: 10px;
+}   
+
+.image img {
+
+   
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15%;
+    
+
+}
+
+.fav-title{
+    
+    padding-left: 5px;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #f7f7f7;
+    font-weight: 500;
+     
+}
+.fav-artist{
+    padding-left: 5px;
+    margin-top: 4px;
+    font-size: 15px;
+    color: #f7f7f7b0;
+    font-weight: 400;
+     
+}

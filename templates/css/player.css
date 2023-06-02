@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+:root {
+    --root-black: #2d2e37;
+    --root-grey: #C4C4C4;
+    --root-purple: #5700BF;
+    --root-white: #FDFCFF;
+
+    --root-height: 100vh;
+    --root-width: 100vw;
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+
+    /* outline: 1px solid rgba(255, 0, 0, 0.363); */
+}
+
+body {
+   
+
+
+    background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url( ..//background/bg-blur-noise.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* font-family: 'Mulish', sans-serif; */
+    font-family: 'Rubik', sans-serif;
+    color: var(--root-white);
+
+
+    text-transform: capitalize;
+
+    /* transition: all 1s; */
+
+}
+
+.player-box{
+    margin-top: 20px;
+    
+    height: var(--root-height);
+    width: var(--root-width);
+
+    background-color: hsla(253, 25%, 26%, 0.568);
+    backdrop-filter: blur(5px);
+    border-radius: 40px 40px 0px 0px;
+
+    
+
+
+}
+
+.player-list{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.player-album-cover{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+    filter: drop-shadow(11px 11px 20px #000);
+
+    
+}
+
+
+.player-album-cover img{
+    
+    height: 340px;
+    width: 340px;
+    background-color: #FDFCFF;
+    border-radius: 10%;
+
+    object-fit:  cover; 
+
+}
+
+
+.player-album-title{
+    margin-top: 25px;
+    text-align: center;
+    font-size: 23px;
+}
+.player-album-artist{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.player-control-box{
+    margin-top: 20px;
+
+    font-size: 25px;
+    font-weight: lighter;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 40px;
+}
+
+.player-media-play{
+
+    padding: 15px;
+    padding-left: 17px;
+    background-color: var(--root-white);
+    border-radius: 50%;
+}
+
+
+.player-media-play .play-media{
+    color: var(--root-black);
+    font-size: 25px;
+}
+
+.player-music-bar{
+    margin-top: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 50px;
+    gap: 20px;
+
+    font-size: 15px;
+    font-weight: 500;
+    color:  hsl(253, 41%, 75%);
+}
+
+.music-progress{
+    width: 65%;
+    height: 10%;
+    
+
+    background-color: rgba(223, 223, 223, 0.486);
+    backdrop-filter: blur(10px);
+    border-radius:10px;
+}
+
+.player-control-items-back{
+    margin-right: -18px;
+}
+
+.player-control-items-fow{
+    margin-left: -18px;
+}
+/* ===============Footer Navbar============================= */
+.footer-navbar {
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.main-footer-navbar {
+    margin-top: 20px;
+
+    height: 8vh;
+    width: 100vw;
+
+    background-color: rgba(255, 255, 255, 0.041);
+    backdrop-filter: blur(10px);
+    /* box-shadow: 10px 10px 10px 10px rgba(45, 46, 55, 0.432); */
+
+    border-radius: 60px 60px 0px 0px;
+}
+.main-footer-navbar-sxy {
+    margin-top: 20px;
+
+    height: 5vh;
+    width: 100vw;
+
+    background-color: rgba(255, 255, 255, 0.041);
+    backdrop-filter: blur(10px);
+    /* box-shadow: 10px 10px 10px 10px rgba(45, 46, 55, 0.432); */
+
+    border-radius: 60px 60px 0px 0px;
+}
+
+.footer-navbar-component {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footer-navbar-component-sxy {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footer-navbar-component-items {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 5%;
+
+    font-size: 1.2em;
+    border-radius: 5px;
+    padding: 8px;
+
+    transition: all 0.2s;
+}
+
+.footer-navbar-sxy {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 4%;
+
+    width: 60%;
+    height: 8px;
+
+    font-size: 3em;
+    border-radius: 50px;
+    border: none;
+
+
+    background-color: #fdfcffc0;
+
+    transition: all 0.2s;
+}
+
+
+
+.footer-navbar-component-items:hover {
+    background-color: #3806759f;
+
+}
+
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+#bar.entry-animation {
+    animation: slideOut 0.3s ease-out;
+    transform: translateY(100%);
+}
+
+#bar.visible {
+    animation: slideIn 0.3s ease-out;
+    transform: translateY(0);
+}
+
+
+
+
+@media only screen and (max-width: 599px) {
+    .footer-navbar-component-items {
+        margin-top: 2.5%;
+        /* Adjust the margin as needed */
+    }
+
+    .footer-navbar-component-items-sxy {
+        margin-top: 5%;
+        /* Adjust the margin as needed */
+    }
+
+
+}
+
+
+@media only screen and (max-width: 599px) {
+    .footer-navbar-component-items {
+        margin-top: 2%; /* Adjust the margin as needed */
+    }
+
+    
+}
+
+
+/* For devices with a minimum width of 600px (small tablets and larger) */
+@media only screen and (min-width: 600px) {
+    .footer-navbar-component-items {
+        margin-top: 2.5%; /* Adjust the margin as needed */
+    }
+}
+
+/* For devices with a minimum width of 992px (desktops and larger) */
+@media only screen and (min-width: 992px) {
+    .footer-navbar-component-items {
+        margin-top: 5%; /* Adjust the margin as needed */
+    }
+}
+
+/* For devices with a minimum width of 1200px (large desktops and larger) */
+@media only screen and (min-width: 1200px) {
+    .footer-navbar-component-items {
+        margin-top: 1%; /* Adjust the margin as needed */
+    }
+}
